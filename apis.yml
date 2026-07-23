@@ -35,12 +35,18 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/banco-popular-domain-security.yml
 - type: Website
   url: https://www.popular.com/en/
 - type: Website
   url: https://www.popularbank.com/
 - type: Support
   url: https://www.popular.com/security/
+- type: PrivacyPolicy
+  url: https://www.popular.com/en/privacy/
+- type: TermsOfService
+  url: https://www.popular.com/en/terms/
 - type: LinkedIn
   url: https://www.linkedin.com/company/popularbank
 maintainers:
