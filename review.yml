@@ -1,0 +1,86 @@
+aid: banco-popular
+name: Popular (Banco Popular)
+review:
+  question: Does Popular (Banco Popular) expose a public, first-party developer API or open-finance data-access API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Popular, Inc. (NASDAQ: BPOP) — the parent of Banco Popular de Puerto Rico
+    (BPPR) and Popular Bank on the U.S. mainland — does not publish a public
+    first-party developer portal or any downloadable API specification for its
+    U.S. institutions on popular.com. The candidate developer/API subdomains do
+    not resolve, and no "Developers" or "APIs" page exists on the public site.
+    Consumer-permissioned account and transaction data is reachable only
+    indirectly, through third-party data aggregators (Plaid, Tink, Finicity),
+    i.e. an aggregator-only / passthrough open-finance model that is typical of
+    U.S. regional banks. No first-party OAuth2/OIDC/API-key/mTLS developer
+    program, no OpenAPI/Swagger, no FDX membership, and no published CFPB
+    Section 1033 data-access posture were found. This is an honest identity-only
+    record with no fabricated API surface.
+  openFinancePosture:
+    firstPartyDeveloperPortal: false
+    downloadableOpenAPI: false
+    fdxParticipant: false
+    fdxNote: No documented FDX (Financial Data Exchange) membership or FDX-conformant data-access API was found for Popular, Inc. / BPPR / Popular Bank.
+    cfpb1033Posture: none-published
+    cfpb1033Note: >-
+      As a U.S. FDIC-insured depository institution, Popular is subject to the
+      emerging CFPB Section 1033 (Personal Financial Data Rights) rule, but no
+      first-party data-access program or 1033 statement is published.
+    aggregatorAccess: true
+    aggregators:
+      - Plaid
+      - Tink
+      - Finicity
+    authModel: none-first-party
+  probes:
+    - url: https://developer.popular.com
+      status: 000
+      note: Does not resolve (no host).
+    - url: https://developers.popular.com
+      status: 000
+      note: Does not resolve (no host).
+    - url: https://api.popular.com
+      status: 000
+      note: Does not resolve (no host).
+    - url: https://www.popular.com/developers
+      status: 404
+      note: No developer page.
+    - url: https://www.popular.com/en/
+      status: 200
+      note: Public marketing site (JS SPA); no developer/API surface.
+    - url: https://www.popularbank.com/
+      status: 200
+      note: Mainland Popular Bank public site; no developer/API surface.
+    - url: https://www.popular.com/security/
+      status: 200
+      note: Security Center / support page.
+    - url: https://apiportal.popularenlinea.com
+      status: 200
+      note: >-
+        Belongs to Banco Popular Dominicano / Grupo Popular (Dominican Republic),
+        a DISTINCT company. NOT attributed to Popular, Inc. (popular.com).
+  transports:
+    - protocol: REST
+      documented: false
+      note: No first-party REST developer API is documented for popular.com.
+specProvenance: none — no first-party OpenAPI/Swagger published; nothing harvested.
+sources:
+  - url: https://www.openbankingtracker.com/provider/popularbank
+    type: Reference
+    note: Lists Popular Bank as aggregator-accessible (Plaid/Tink/TrueLayer), no first-party API portal.
+  - url: https://fintable.io/coverage/banks/United%20States/23028_banco-popular-puerto-rico
+    type: Reference
+    note: Banco Popular Puerto Rico transaction data accessed via Plaid aggregator.
+  - url: https://www.popular.com/en/
+    type: Website
+    note: Public site; no developer or API documentation.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public, first-party API surface exists for Popular (Banco Popular) in the
+    United States. The record is identity-only, capturing an honest
+    aggregator-only open-finance posture. No specs were fabricated or harvested.

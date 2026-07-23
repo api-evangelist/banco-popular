@@ -1,0 +1,48 @@
+aid: banco-popular
+url: https://raw.githubusercontent.com/api-evangelist/banco-popular/refs/heads/main/apis.yml
+name: Popular (Banco Popular)
+kind: company
+description: >-
+  Popular, Inc. (NASDAQ: BPOP), operating as Banco Popular, is a publicly traded
+  financial holding company founded in 1893 and headquartered in Hato Rey, San
+  Juan, Puerto Rico. It is the largest bank in Puerto Rico and operates through
+  two chartered depository segments: Banco Popular de Puerto Rico (BPPR),
+  serving Puerto Rico and the U.S. Virgin Islands, and Popular Bank (formerly
+  Banco Popular North America), a New York state-chartered commercial bank
+  serving mainland U.S. markets including New York, New Jersey, and Florida.
+  Popular is FDIC-insured and regulated as a U.S. bank holding company. On its
+  open-finance and API posture, Popular does not publish a first-party public
+  developer portal or downloadable API specifications for its U.S. institutions
+  (popular.com); consumer-permissioned account and transaction data is made
+  available indirectly through third-party data aggregators such as Plaid, Tink,
+  and Finicity rather than a direct bank API. This identity record reflects that
+  honest reality — an aggregator-only access model with no documented first-party
+  API surface, FDX membership, or published CFPB Section 1033 data-access program.
+  (Note: the separate apiportal.popularenlinea.com open-banking portal belongs to
+  Banco Popular Dominicano / Grupo Popular, a distinct Dominican Republic company,
+  not to Popular, Inc.)
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Puerto Rico
+- Regional Bank
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.popular.com/en/
+- type: Website
+  url: https://www.popularbank.com/
+- type: Support
+  url: https://www.popular.com/security/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/popularbank
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
