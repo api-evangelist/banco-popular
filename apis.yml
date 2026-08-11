@@ -35,6 +35,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: Blog
+  url: https://blog.popular.com/
+- type: Login
+  url: https://micredito.popular.com/us/en/login
 - type: DomainSecurity
   url: security/banco-popular-domain-security.yml
 - type: Website
